@@ -18,10 +18,10 @@
 
       <nav class="container">
         <ul>
-          <li><a href="#personal-info">Inicio</a></li>
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact-me">Contacto</a></li>
+          <li><a href="#" id="backHome">Inicio</a></li>
+          <li><a href="#about" id="backAbout">Sobre mí</a></li>
+          <li><a href="#portfolio" id="backPortfolio">Portfolio</a></li>
+          <li><a href="#contact" id="backContact">Contacto</a></li>
           <li>
             <img src="assets/united-kingdom-uk-svgrepo-com .svg" alt="english" id="english">
             <img src="assets/flag-for-flag-spain-svgrepo-com.svg" alt="spanish" id="spanish">
@@ -47,13 +47,12 @@
 
       <!--  --------------------------------Sobre mi--------------------- -->
       <section id="about">
-        <div class="container">
-          <div class="row">
+          
             <div class="about-col-1">
               <img src="assets/user.png" alt="user    " />
             </div>
             <article class="about-col-2">
-              <h1 class="subtitle">Sobre mí</h1>
+              <h2 class="subtitle">Sobre mí</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
                 voluptatum officia necessitatibus voluptas nisi officiis soluta
@@ -66,8 +65,8 @@
                 <p class="tab-links" id="education-link">Educación</p>
               </div>
 
-              <article class="tab-contents" id="skills">
-                <ul>
+              <article id="skills">
+                <!-- <ul>
                   <li><span>Desarollo web</span><br />Stack JS/HTML/CSS a nivel intermedio/avanzado<br>React nivel basico<br>Testing nivel basico/medio <br> Manejo intermedio de GIT y GitHub</br></li>
                   <li>
                     <span>Base de datos</span><br />Conocimientos introductorios sobre bases relacionales utilizando SQL y el motor mySql
@@ -75,13 +74,65 @@
                   <li>
                     <span>Otros lenguajes</span><br>Programacion Orientada a objetos y patrones de diseño con Java nivel basico/intermedio<br>C nivel basico
                   </li>
-                </ul>
+                </ul> -->
+
+                <div id="javascript" class="container skill-card">
+                  <h3>Javascript</h3>
+                  <img src="assets/logo-javascript.svg" alt="javascript">
+                  <p>Intermedio/avanzado</p>
+                </div>
+                <div id="html/css" class="container skill-card">
+                  <h3>HTML/CSS</h3>
+                  <div>
+                    <img src="assets/html-1.svg" alt="html">
+                    <img src="assets/css-3.svg" alt="css">
+                  </div>
+                  
+                  <p>Intermedio/avanzado</p>
+                </div>
+                <div id="java" class="container skill-card">
+                  <h3>Java</h3>
+                  <img src="assets/icons8-logotipo-de-java-coffee-cup-32.png" alt="java">
+                  <p>Basico/Intermedio</p>
+                </div>
+                <div id="react" class="container skill-card">
+                  <h3>React</h3>
+                  <img src="assets/icons8-reaccionar-32.png" alt="react">
+                  <p>Basico/Intermedio</p>
+                </div>
+                <div id="git" class="container skill-card">
+                  <h3>Git/GitHub</h3>
+                  <div>
+                    <img src="assets/icons8-git.svg" alt="git">
+                    <img src="assets/github.svg" alt="github">
+                  </div>
+                  
+                  <p>Basico/Intermedio</p>
+                </div>
+                <div id="sql" class="container skill-card">
+                  <h3>SQL</h3>
+                  <div>
+                    <img src="assets/sql.svg" alt="sql">
+                    <img src="assets/icons8-logo-de-mysql.svg" alt="mySql">
+                  </div>
+                  
+                  <p>Basico/Intermedio</p>
+                </div>
+                <div id="c" class="container skill-card">
+                  <h3>C</h3>
+                  <img src="assets/icons8-c-programación-32.png" alt="c">
+                  <p>Basico/Intermedio</p>
+                </div>
+                
+               
+                
               </article>
                
-              <article class="tab-contents" id="experience">
+              <article class="hide" id="experience">
                 <ul>
                   <li>
-                    <p><strong>Como estudiante en busca de mi primer experiencia en el rubro IT no poseo aun experiencia como desarollador</strong><br><p>Sin embargo considero que mi experiencia laboral previa dentro del rubro comercio y atencion al cliente me a permitido el desarollo personal y de soft skills necesario para poder desempeñarse con responsabilidad, respeto y tolerancia en cualquier ambiente laboral mas alla del rubro</p>
+                    <h3 id="experience-subtitle"><strong>Como estudiante en el campo de Desarrollo de Software estoy en busca de mi primer experiencia laboral en el sector</strong></h3>
+                    <p>Considero que mi experiencia previa en el campo del comercio y la atención al cliente me ha permitido desarrollar habilidades personales y blandas necesarias para trabajar con responsabilidad, respeto y tolerancia en cualquier entorno laboral.</p>
 
                   </li>
                   <li><span>Tata Consultancy Service</span><br />Service Desk Agent:<br>Brindar soporte técnico a los empleados de PWC en Estados Unidos<br>
@@ -90,13 +141,11 @@
                     <span>Garmin Uruguay</span><br />Encargado de tienda<br>Atención al cliente: asesoramiento sobre características, uso y cuidado de los distintos productos, entre los que se encuentran tecnologías aplicadas al ejercicio físico, náutica, producción audiovisual, entre otros.<br>
                     Asesoramiento en caso de quejas y devoluciones.<br>
                     Costumer service online: gestión de redes, creación ocasional de contenidos.<br>
-                    Ejecución de las ventas realizadas por Mercado Libre, comunicación con los clientes respecto a dudas y reclamos.<br> 
                     Servicio post-venta: evaluación primaria de problemas del producto, realización de reparaciones en casos específicos.<br>
                     Asignación de productos defectuosos a departamento de reparaciones.<br>
                     Gestión de caja y documentación: facturaciones a clientes, pagos a proveedores, arqueo de cierre de caja.<br>
                     Gestión de stock: organización del espacio de almacenamiento. Control de disponibilidades y encargo a depósito según necesidades observadas.<br> 
-                    Display de producto: exhibición de la mercadería para maximizar atributos y ventas.<br>
-                    Armado de stand en eventos deportivos y ferias.<br>
+                  
                   </li>
                   <li>
                     <span>Libreria Pocho</span><br />Atención al cliente: asesoramiento en la búsqueda de libros durante la zafra de comienzo de clases.<br>
@@ -105,7 +154,7 @@
                 </ul>
               </article>
 
-              <article class="tab-contents" id="education">
+              <article class="hide" id="education">
                 <ul>
                   <li><span>Autodidacta</span><br />Mi primer acercamiento a la programacion fue a traves de varios cursos de plataformas como udemy, cursera, youtube.<br>
                   Tras ese primer acercamiento realice el curso online CS50 de Havard que me permitio tomar un conocimiento mas profundo de los fundamentos de la programacion</li>
@@ -120,32 +169,31 @@
               </article>
 
             </article>
-          </div>
-        </div>
+          
       </section>
 <!-- --------------------------------------------portfolio------------------------------------------ -->
 
 <section id="portfolio">
-    <h1 class="sub-title">My projects</h1>
+    <h2 class="subtitle">Portfolio</h2>
     <article class="project-list">
-      <div class="project">
-        <img src="assets/calculator-static.png" alt="project-1" class="project-img" id="calculator">
-        <div class="caption"><h3>Calculadora JS</h3>
+      <div class="project" id="calculator">
+        <img src="assets/calculator-static.png" alt="project-1" class="project-img">
+        <div class="caption" id="calculator-info"><h3>Calculadora JS</h3>
         <p>Calculadora desarollada utilizando JS Vanilla y html/css</p></div>
       </div>
-      <div class="project">
-        <img src="assets/tateti-static.png" alt="project-1" class="project-img" id="ta-te-ti">
-        <div class="caption"><h3>Ta-Te-ti JS</h3>
+      <div class="project" id="ta-te-ti">
+        <img src="assets/tateti-static.png" alt="project-1" class="project-img" >
+        <div class="caption" id="tateti-info"><h3>Ta-Te-ti JS</h3>
         <p>Implementacion del clasico juego Ta-Te-Ti desarollado con JS Vanilla html y Sass </p></div>
       </div>
-      <div class="project">
-        <img src="assets/fe1.png" alt="project-1" class="project-img" id="landingPage">
-        <div class="caption"><h3>Examen Front End 1</h3>
+      <div class="project" id="landingPage">
+        <img src="assets/fe1.png" alt="project-1" class="project-img" >
+        <div class="caption" id="landing-info"><h3>Examen Front End 1</h3>
         <p>Entrega final de la materia Front End 1 de la carrera Certified Tech Developer<br>Solo maqueta Html/CSS sin JS implementado</p></div>
       </div>
-      <div class="project">
-        <img src="assets/todo.png" alt="project-1" class="project-img" id="todo">
-        <div class="caption"><h3>To-Do App JS</h3>
+      <div class="project" id="todo">
+        <img src="assets/todo.png" alt="project-1" class="project-img" >
+        <div class="caption" id="todo-info"><h3>To-Do App JS</h3>
           <p>To-Do App desarollada para la materia Front End 2 de Certified Tech Developer<br>
           Desarollada con JS vanilla y se pone en practica la implemetacion de una API para guardar tareas</p></div>
       </div>
@@ -168,13 +216,14 @@
     <a href="assets/SANTIAGO HERNANDEZ CV 2023.pdf" download="Santiago Hernandez CV" id="cv-button">Descarga CV</a>
   </div>
   
-  <form action="">
+  <form action="https://formspree.io/f/mjvdpnlz" method="POST">
     <label for="costumer-name"></label>
     <input type="text" id="costumer-name" placeholder="Tu nombre">
     <label for="email"></label>
     <input type="email" id="email" placeholder="Tu Email">
     <label for="mensaje"></label>
     <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
+    <button type="submit">Enviar</button>
 
   </form>
 </section>

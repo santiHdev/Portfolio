@@ -10,6 +10,10 @@ body{
     color: #fdf0d5;
 }
 
+.hide{
+display: none !important;
+}
+
 #title-logo{
     display: flex;
     align-items: center;
@@ -142,23 +146,52 @@ nav ul li a:hover::after{
 
 }
 
+#personal-info{
+    align-self: flex-start;
+    margin-top: 10%;
+}
 /* ----------------sobre mi-------------------------- */
 
 #about{
    
     margin-top: 100vh;   
     color: #ababab;
+    display: flex;
+
     height: 100vh;
     z-index: 2;
     background-color: #003049;
 
 }
 
-.row{
+#skills{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    color: #a9d6e5;
+    height: 100%;
+    
+    
 }
+
+.skill-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+     background-color: rgba(244, 247, 245, 0.2);
+     border-radius: 5%; 
+    height: 115px;
+    margin: 5px;
+}
+
+.skill-card:hover{
+    background-color: rgba(249, 247, 243, 0.1);
+}
+.skill-card img{
+    max-width: 100%;
+}
+
 
 .about-col-1{
     flex-basis: 35%;
@@ -170,13 +203,34 @@ nav ul li a:hover::after{
 }
 
 .about-col-2{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
     flex-basis: 60%;
 }
+
+.about-col-2 h2 {
+    align-self: center;
+    margin: 5px;
+    border-bottom: 5px solid #669bbc;
+    
+}
+
 
 .subtitle{
     font-size: 60px;
     font-weight: 600;
     color: #fdf0d5;
+}
+
+#experience-subtitle{
+
+   /*  padding: 5px 0;
+    border-radius: 10px;
+    background-color: #fdf0d5; */
+    color: #669bbc;
+    font-size: 15px;
+
 }
 
 .tab-titles{
@@ -207,12 +261,6 @@ nav ul li a:hover::after{
     width: 50%;
 }
 
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-
-}
-
 .tab-contents ul li span{
     color: #669bbc;
     font-size: 14px;
@@ -233,6 +281,12 @@ nav ul li a:hover::after{
     padding: 50px 3%;
     background-color: #003049;
     z-index: 1;
+}
+
+#portfolio h2{
+    
+    border-bottom: 5px solid #669bbc;
+    width: 242px;
 }
 .project-list{
     margin-top: 40px;
@@ -263,6 +317,7 @@ nav ul li a:hover::after{
 }
 
 .project:hover img{
+    cursor: pointer;
     filter: grayscale(0%);
 }
 
@@ -281,6 +336,7 @@ nav ul li a:hover::after{
   }
 
   .project:hover .caption{
+    cursor: pointer;
     opacity: 1;
   }
 
