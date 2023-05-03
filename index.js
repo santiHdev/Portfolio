@@ -1,4 +1,5 @@
-window.addEventListener("load", () => {
+/* window.addEventListener("load", () => { */
+
   /*  ---------------------Variables globales--------------------- */
   const  backHome = document.querySelector("#backHome");
 
@@ -13,21 +14,58 @@ window.addEventListener("load", () => {
   const experienceSelect = document.querySelector("#experience-link");
   const educationSelect = document.querySelector("#education-link");
   const aboutmeSelector = document.querySelectorAll(".tab-links");
+  const presentacion = document.querySelector("#presentacion");
   //Menu de proyectos
   const project = document.querySelectorAll(".project");
   const projectImg = document.querySelectorAll(".project-img");
   //form
-  const form = document.querySelector("form");
+  const formulario = document.querySelector("form");
   const customerName = document.querySelector("#costumer-name");
   const customerEmail = document.querySelector("#email");
   const customerText = document.querySelector("#mensaje");
+  //nav
+  const hamburger = document.querySelector("#hamburger");
+  const navBar = document.querySelector("#nav-bar");
+  const media = window.matchMedia("(max-width: 414px)");
+  console.log(media.matches);
 
   aboutMe();
   projectAnimation();
-  emailSend();
   changeSection();
-  skillTab.classList.add("active-tab");
-  skillSelect.classList.add("active-link");
+  /* skillTab.classList.add("active-tab");
+  skillSelect.classList.add("active-link"); */
+
+  
+  function showMenu(media){
+    if (media.matches){
+        navBar.classList.add("hide");
+        hamburger.classList.remove("hide");
+
+    }else{
+        hamburger.classList.add("hide");
+        navBar.classList.remove("hide");
+
+    }
+}
+
+media.addEventListener("change",showMenu(media));
+
+function expandMenu() {
+  hamburger.addEventListener("click", ()=>{
+    hamburger.classList.add("hide");
+/*     `<ul>
+    <li><a href="#" id="backHome">Inicio</a></li>
+    <li><a href="#about" id="backAbout">Sobre mí</a></li>
+    <li><a href="#portfolio" id="backPortfolio">Portfolio</a></li>
+    <li><a href="#contact" id="backContact">Contacto</a></li>
+    <li>
+      <img src="assets/united-kingdom-uk-svgrepo-com .svg" alt="english" id="english" />
+      <img src="assets/flag-for-flag-spain-svgrepo-com.svg" alt="spanish" id="spanish" />
+    </li>
+  </ul>` */
+  })
+}
+
 
   function changeSection() {
 
@@ -55,6 +93,12 @@ window.addEventListener("load", () => {
           skillTab.classList.toggle("hide");
           experienceTab.classList.add("hide");
           educationTab.classList.add("hide");
+          
+          presentacion.classList.add("hide");
+          if (skillTab.classList.contains("hide")){
+            presentacion.classList.remove("hide");
+          }
+          
 
           /*   Cambia la clase del link seleccionado */
 
@@ -67,6 +111,11 @@ window.addEventListener("load", () => {
           skillTab.classList.add("hide");
           educationTab.classList.add("hide");
 
+          presentacion.classList.add("hide");
+          if (experienceTab.classList.contains("hide")){
+            presentacion.classList.remove("hide");
+          }
+
           /*   Cambia la clase del link seleccionado */
           experienceSelect.classList.toggle("active-link");
           educationSelect.classList.remove("active-link");
@@ -76,6 +125,11 @@ window.addEventListener("load", () => {
           educationTab.classList.toggle("hide");
           skillTab.classList.add("hide");
           experienceTab.classList.add("hide");
+
+          presentacion.classList.add("hide");
+          if (educationTab.classList.contains("hide")){
+            presentacion.classList.remove("hide");
+          }
 
           /* Cambia la clase del link seleccionado */
 
@@ -106,7 +160,7 @@ window.addEventListener("load", () => {
         });
 
         project[i].addEventListener("mouseout", () => {
-          console.log("hola");
+          
           projectImg[i].src = "assets/tateti-static.png";
         });
       } else if ( project[i].id == "landingPage")
@@ -116,7 +170,7 @@ window.addEventListener("load", () => {
         });
 
         project[i].addEventListener("mouseout", () => {
-          console.log("hola");
+          
           projectImg[i].src = "assets/landing-static.png";
         });
 
@@ -127,16 +181,60 @@ window.addEventListener("load", () => {
         });
 
         project[i].addEventListener("mouseout", () => {
-          console.log("hola");
+        
           project[i].src = "assets/todo-static.png";
         });
       }
     }
   }
-
+/* 
   function emailSend() {
-    form.addEventListener("submit", (e) => {
+    formulario.addEventListener("submit", (e) => {
       e.preventDefault();
     });
   }
-});
+
+
+}); */
+
+console.log(formulario);
+const email = document.querySelector("#email");
+const message = document.querySelector("#textarea");
+
+formulario.addEventListener("submit", (e)=>{
+  e.preventDefault();
+  console.log("paso");
+  const datos = {
+    email: email.value,
+    message: message.value
+  }
+  validarTexto(datos.message);
+  normalizarTexto(datos.message);
+  validarEmail(datos.email);
+  normalizarEmail(datos.email);
+enviarMail(datos);
+
+  
+})
+
+function enviarMail(datos){
+  const URL = "https://formspree.io/f/mjvdpnlz";
+  const config = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    
+    },
+    body: JSON.stringify(datos)
+  }
+
+  fetch(URL, config)
+.then((response) => {
+  console.log(response);
+  return response.json();
+})
+.catch((err) => console.log(err))
+
+}
+
+
