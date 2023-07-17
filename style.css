@@ -517,6 +517,21 @@ form {
   button[type="submit"]:hover {
     background-color: #3e8e41;
   }
+
+  #disclaimer h3{
+    color:#ff004f
+    
+  }
+
+  #disclaimer{
+    font-size: 15px;
+    padding: 5px;
+    border-style:solid;
+    border-color: #9ecaed;
+    border-radius: 5px;
+
+
+  }
   
 /* -------------------/ Media Quqery Smartphone /----------------------------- */
 
